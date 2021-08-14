@@ -21,7 +21,7 @@ const Featured = (props) => {
                         <option value="western">Western</option>
                         <option value="animation">Animation</option>
                         <option value="drama">Drama</option>
-                        <option value="documentary">documentart</option>
+                        <option value="documentary">Documentary</option>
 
                     </select>
                 </div>
