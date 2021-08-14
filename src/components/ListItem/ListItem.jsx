@@ -1,4 +1,4 @@
-import { AddCircleOutlineOutlined, PlayCircleFilledOutlined, ThumbDownOutlined, ThumbUpOutlined } from '@material-ui/icons'
+import { Add, PlayArrow, ThumbDownOutlined, ThumbUpOutlined } from '@material-ui/icons'
 import React, { useState } from 'react'
 import './ListItem.scss'
 const ListItem = (props) => {
@@ -7,7 +7,7 @@ const ListItem = (props) => {
     return (
         <div 
             className="listItem" 
-            style={{'left': isHovered && props.index * 225 + props.index * 5 - 50}}
+            style={{'left': isHovered && props.index * 225 - 50 + props.index * 5}}
             onMouseEnter={() => setIsHovered(true)} 
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -20,14 +20,14 @@ const ListItem = (props) => {
                     <video src={trailer} autoPlay={true} loop/>
                     <div className="itemInfo">
                         <div className="icons">
-                            <PlayCircleFilledOutlined/>
-                            <AddCircleOutlineOutlined/>
-                            <ThumbUpOutlined/>
-                            <ThumbDownOutlined/>
+                            <PlayArrow className="icon" />
+                            <Add className="icon" />
+                            <ThumbUpOutlined className="icon" />
+                            <ThumbDownOutlined className="icon" />
                         </div>
                         <div className="itemInfoTop">
                             <span>1 hour 45 mins</span>
-                            <span className="contentRating">16+</span>
+                            <span className="contentRating">+16</span>
                             <span>2020</span>
                         </div>
                         <div className="desc">
