@@ -4,6 +4,7 @@ import './ListItem.scss'
 const ListItem = (props) => {
     const [isHovered, setIsHovered] = useState(false)
     const trailer = "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761"
+    const imgSrc = props.imgSrc
     return (
         <div 
             className="listItem" 
@@ -11,10 +12,17 @@ const ListItem = (props) => {
             onMouseEnter={() => setIsHovered(true)} 
             onMouseLeave={() => setIsHovered(false)}
         >
-            <img 
+            {!!imgSrc ? (<img 
+                src={imgSrc} 
+                alt=""
+            />) : (<img 
+                src="https://occ-0-3216-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe5TsVeChnFnPGTyfBRKXzF4YowytWK4YaIoCBmpipi2WCVYnMnD0_Crw7JJ1iM_rBn_JBCRHC3Xi-iseavu-Uk68Pd-Guih7CCwBRfjW9al84fCcuLzgc9Hk-wB.jpg?r=d81" 
+                alt=""
+            />)}
+            {/* <img 
                 src="https://occ-0-3216-2164.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe5TsVeChnFnPGTyfBRKXzF4YowytWK4YaIoCBmpipi2WCVYnMnD0_Crw7JJ1iM_rBn_JBCRHC3Xi-iseavu-Uk68Pd-Guih7CCwBRfjW9al84fCcuLzgc9Hk-wB.jpg?r=d81" 
                 alt="https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            />
+            /> */}
             {isHovered && (
                 <>
                     <video src={trailer} autoPlay={true} loop/>

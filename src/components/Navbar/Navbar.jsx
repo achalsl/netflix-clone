@@ -1,4 +1,4 @@
-import { ArrowDropDown, Notifications, Search, WbIncandescentOutlined } from '@material-ui/icons'
+import { ArrowDropDown, Notifications, Search } from '@material-ui/icons'
 import React, {useState} from 'react'
 import './Navbar.scss'
 const Navbar = () => {

@@ -38,7 +38,7 @@ const List = () => {
                     <ListItem index="6" />
                     <ListItem index="7" />
                     <ListItem index="8" />
-                    <ListItem index="9" />
+                    <ListItem index="9" imgSrc="https://images.pexels.com/photos/4190056/pexels-photo-4190056.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
                 </div>
                 <ArrowForwardIosOutlined className="sliderArrow right" onClick={() => handleClick('right')}/>
             </div>
